@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Wisata alam Lampung Timur</title>
+    <style>
+
+body {
+    font-family: Arial, sans-serif;
+    justify-content: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.grid-item {
+    border: 1px solid black;
+    padding: 20px;
+    box-sizing: border-box;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+}
+
+.grid-item h2 {
+    margin-top: 10px;
+
+}
+
+footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            border-top: 1px solid #ddd;
+        }
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+    </style>
+</head>
+<body>
+    <h1>Wisata Alam Lampung Timur</h1>
+    <p>Lampung adalah sebuah provinsi di Indonesia yang terkenal dengan pantainya yang indah. Berikut ini beberapa informasi mengenai pantai di Lampung:</p>
+    <div class="grid-container">
+        <div class="grid-item">
+            <img src="images/pantai mutiara.jpg" alt="Pantai di Lampung">
+            <h2>Pantai Kerang Mas</h2>
+            <p>Pantai Selat Patrol merupakan salah satu pantai terindah di Lampung.</p>
+        </div>
+        <div class="grid-item">
+            <img src="images/hutanmangrove.jpg" alt="Pantai di Lampung">
+            <h2>Hutan Mangrove</h2>
+            <p>Pantai Liyung terkenal dengan pemandangan pantai yang berbelang hingga teluk.</p>
+        </div>
+        <div class="grid-item">
+            <img src="images/waykambas.jpg" alt="Pantai di Lampung">
+            <h2>Pantai Way Kambas</h2>
+            <p>Pantai Marina adalah tempat yang populer untuk wisata keluarga di Lampung.</p>
+        </div>
+
+        <div class="grid-item">
+            <img src="images/hutanmangrove.jpg" alt="Pantai di Lampung">
+            <h2>Hutan Mangrove</h2>
+            <p>Pantai Liyung terkenal dengan pemandangan pantai yang berbelang hingga teluk.</p>
+        </div>
+
+        <div class="grid-item">
+            <img src="images/hutanmangrove.jpg" alt="Pantai di Lampung">
+            <h2>Hutan Mangrove</h2>
+            <p>Pantai Liyung terkenal dengan pemandangan pantai yang berbelang hingga teluk.</p>
+        </div>
+
+        <div class="grid-item">
+            <img src="images/hutanmangrove.jpg" alt="Pantai di Lampung">
+            <h2>Hutan Mangrove</h2>
+            <p>Pantai Liyung terkenal dengan pemandangan pantai yang berbelang hingga teluk.</p>
+        </div>
+
+    </div>
+
+    <footer>
+        &copy; 2023 Wisata Alam Lampung 
+    </footer>
+</body>
+</html>
