@@ -45,15 +45,71 @@ nav ul li a {
     background-color: rgba(0, 0, 0, 0.5); /* tambahkan ini untuk membuat latar belakang transparan */
 }
 
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("images/menarassiger.jpeg");
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
 .hero h1 {
     font-size: 48px;
     margin-bottom: 24px;
+}
+
+.hero button {
+    background-color: white;
+    color: black;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 24px;
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 48px 0;
+}
+
+.feature {
+    flex: 1 0 300px;
+    margin: 12px;
+    padding: 24px;
+    background-color: white;
+    color: black;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.feature h2 {
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.feature button {
+    background-color: #afa84c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 12px;
 }
 
     </style>
 </head>
 <body>
 
+    
 <header>
     <nav>
         <ul>
@@ -67,9 +123,35 @@ nav ul li a {
     <section class="hero">
         <h1>SELAMAT DATANG DI LAMPUNG PUNYA WISATA</h1>
         <!-- <img src="images/sigerlpg.jpeg" alt=""> -->
-        <p> website ini membantu anda untuk merencanakan liburan dengan nyaman</p>
+        <button>Tentang Lampung</button>
     </section>
-    
 
+    <section class="features">
+        <div class="feature">
+            <h2>Lampung Tengah</h2>
+            <p> Deskripsi </p>
+            <button onclick="location.href=''">Read More</button>
+        </div>
+        <div class="feature">
+            <h2>Lampung Selatan</h2>
+            <p>Deskripsi</p>
+            <button  onclick="location.href='' ">Read More</button>
+        </div>
+        <div class="feature">
+            <h2>Lampung Barat</h2>
+            <p>Deskripsi</p>
+            <button onclick="location.href='' ">Read More</button>
+        </div>
+        <div class="feature">
+            <h2>Lampung Timur</h2>
+            <p>Deskripsi</p>
+            <button onclick="location.href='lampungtimur.html'">Read More</button>
+        </div>
+        <div class="feature">
+            <h2>Bandar Lampung</h2>
+            <p>Deskripsi</p>
+            <button onclick="location.href='clara.html'">Read More</button>
+        </div>
+    </section>
 </body>
 </html>
