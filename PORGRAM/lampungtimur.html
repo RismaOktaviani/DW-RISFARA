@@ -1,105 +1,165 @@
-<!DOCTYPE html>
 <html>
-<head>
-    <title> Wisata alam Lampung Timur</title>
+ <head>
     <style>
-
-body {
-    font-family: Arial, sans-serif;
-    justify-content: center;
-}
-
-h1 {
-    text-align: center;
-}
-
-p {
-    text-align: center;
-    
-}
-
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    padding: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-.grid-item {
-    border: 1px solid black;
-    padding: 20px;
-    box-sizing: border-box;
-    opacity: 0;
-    animation: fadeIn 1s ease-in-out forwards;
-}
-
-.grid-item img {
-    width: 100%;
-    height: auto;
-}
-
-.grid-item h2 {
-    margin-top: 10px;
-
-}
-
-footer {
-            text-align: center;
-            margin-top: 20px;
-            padding: 10px;
-            border-top: 1px solid #ddd;
+        body {
+            font-family: Arial, sans-serif;
         }
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
+        .card {
+            background-color: #f0f0f0;
+            width: 300px;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
 
+        .card img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .card h2 {
+            margin-top: 10px;
+            color: #333;
+        }
+
+        .card p {
+            color: #666;
+        }
+
+        .card a {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        display: inline-block;
+        margin-top: 10px;
+         }
+    
+        .card {
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            padding: 50px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.533);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .card h2 {
+            margin: 1rem 0;
+        }
+
+        .card p {
+            margin: 0.5rem 0;
+        }
+
+        .card a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .card a:hover {
+            text-decoration: underline;
+        }
+
+        /* Style the grid container */
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            padding: 5px;
+
+        }
+
+        .footer {
+            /* background-color: #bababa; */
+            /* color: white; */
+            text-align: left;
+            padding: 20px;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .back-btn {
+            background-color: #505050;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            
+        }
+        
     </style>
-</head>
-<body>
-    <h1>Wisata Alam Lampung Timur</h1>
-    <p>Lampung adalah sebuah provinsi di Indonesia yang terkenal dengan pantainya yang indah. Berikut ini beberapa informasi mengenai pantai di Lampung:</p>
+ </head>
+ <body>
     <div class="grid-container">
-        <div class="grid-item">
-            <img src="images/pantai mutiara.jpg" alt="Pantai di Lampung">
+        <div class="card">
+            <img src="images/mangrove.jpeg" alt="Foto wisata alam">
+            <h2>Hutan Mangrove</h2>
+            <p>Destinasi wisata yang satu ini banyak Spot foto menarik, gazebo dengan pemandangan laut tenang. Suasana lebih nyaman dibanding pantai, anginnya sejuk. Anda juga bisa membawa camilan dan minuman untuk pengalaman liburan semarak</p>
+           
+            <p>Harga masuk: Rp. 20.000</p>
+            <p>jam Buka   : Senin - Minggu, 24 Jam</p>
+            <a href="https://maps.app.goo.gl/xV6zfXoEVaZarBno9" target="_blank">Lihat lokasi di Google Maps</a>
+        </div>
+
+        <div class="card">
+            <img src="images/mutiara.jpeg" alt="Foto wisata alam">
+            <h2>Pantai Mutiara Baru</h2>
+            <p>Pantai Mutiara Baru memiliki pasir yang putih dan sedikit bercampur hitam. Garis pantainya juga cukup panjang dari ujung ke ujung. Saat menuju ke pantainya, di kanan-kiri jalan terlihat tambak udang, pantai ini  membuat liburan anda sangat menarik</p>
+            <p>Harga masuk: Rp. 10.000</p>
+            <p>jam Buka   : Senin - Minggu, 06.00 - 18.00</p>
+            <a href="https://maps.app.goo.gl/jZkzLu63rWXfyB2q8" target="_blank">Lihat lokasi di Google Maps</a>
+        </div>
+
+        <div class="card">
+            <img src="images/kerangmas.jpg" alt="Foto wisata alam">
             <h2>Pantai Kerang Mas</h2>
-            <p>Pantai Selat Patrol merupakan salah satu pantai terindah di Lampung.</p>
-        </div>
-        <div class="grid-item">
-            <img src="images/hutanmangrove.jpg" alt="Pantai di Lampung">
-            <h2>Hutan Mangrove</h2>
-            <p>Pantai Liyung terkenal dengan pemandangan pantai yang berbelang hingga teluk.</p>
-        </div>
-        <div class="grid-item">
-            <img src="images/waykambas.jpg" alt="Pantai di Lampung">
-            <h2>Pantai Way Kambas</h2>
-            <p>Pantai Marina adalah tempat yang populer untuk wisata keluarga di Lampung.</p>
+            <p>Pantai Kerang Mas di Lampung Timur populer dengan pasir putih, ombak tenang, dan menyediakan berbagai aktivitas. Pantai Mutiara Baru memiliki pasir putih dan garis pantai panjang, memberikan pengalaman estetik di Lampung Timur.</p>
+            <p>Harga masuk: Rp. 10.000</p>
+            <p>jam Buka   : Senin - Minggu, 24 Jam</p>
+            <a href="https://maps.app.goo.gl/h7nX4g9yYiTmyfM76" target="_blank">Lihat lokasi di Google Maps</a>
         </div>
 
-        <div class="grid-item">
-            <img src="images/hutanmangrove.jpg" alt="Pantai di Lampung">
+        <div class="card">
+            <img src="images/hutanmangrove.jpg" alt="Foto wisata alam">
             <h2>Hutan Mangrove</h2>
-            <p>Pantai Liyung terkenal dengan pemandangan pantai yang berbelang hingga teluk.</p>
+            <p>Deskripsi: Terdapat pulau dan batuan karang di tepi laut serta banyak pemandangan menakjubkan lainnya.</p>
+            <p>Harga masuk: Rp. 50.000</p>
+            <a href="https://goo.gl/maps/dvCWWiBHwqLwSfF47" target="_blank">Lihat lokasi di Google Maps</a>
         </div>
 
-        <div class="grid-item">
-            <img src="images/hutanmangrove.jpg" alt="Pantai di Lampung">
-            <h2>Hutan Mangrove</h2>
-            <p>Pantai Liyung terkenal dengan pemandangan pantai yang berbelang hingga teluk.</p>
+        <div class="card">
+            <img src="images/pantai mutiara.jpg" alt="Foto wisata alam">
+            <h2>Pantai mutiara</h2>
+            <p>Deskripsi: Terdapat pulau dan batuan karang di tepi laut serta banyak pemandangan menakjubkan lainnya.</p>
+            <p>Harga masuk: Rp. 50.000</p>
+            <a href="https://goo.gl/maps/dvCWWiBHwqLwSfF47" target="_blank">Lihat lokasi di Google Maps</a>
         </div>
 
-        <div class="grid-item">
-            <img src="images/hutanmangrove.jpg" alt="Pantai di Lampung">
-            <h2>Hutan Mangrove</h2>
-            <p>Pantai Liyung terkenal dengan pemandangan pantai yang berbelang hingga teluk.</p>
+        <div class="card">
+            <img src="images/waykambas.jpg" alt="Foto wisata alam">
+            <h2>Wisata Alam Bukit Gunungmas</h2>
+            <p>Deskripsi: Terdapat pulau dan batuan karang di tepi laut serta banyak pemandangan menakjubkan lainnya.</p>
+            <p>Harga masuk: Rp. 50.000</p>
+            <a href="https://goo.gl/maps/dvCWWiBHwqLwSfF47" target="_blank">Lihat lokasi di Google Maps</a>
         </div>
 
+        
     </div>
-
-    <footer>
-        &copy; 2023 Wisata Alam Lampung 
-    </footer>
-</body>
+    <div class="footer">
+        <a href="risma.html" class="back-btn">Kembali ke Halaman Utama</a>
+    </div>
+ </body>
 </html>

@@ -1,22 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Halaman Utama</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- cdn font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Titan+One&display=swap");
+      
+      * {
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
 
 
-header {
-  background-color: #f1f1f1;
-  padding: 20px;
-}
+      }
+      :root {
+        --headerBgColor: rgb(134, 21, 21);
+        --textColor: grey;
+        --menuColor: white;
+        --menuHoverCoolor: yellow;
+        --menubg: var(--textColor);
+      }
+      header {
+        background-color: var(--headerBgColor);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+       
+      }
 
+      /* CSS MENU */
+      .area_menu, .area_hamburger_menu
+      {
+        display: inline-block;
+      }
+      .menu::after{
+        content:"";
+        border-bottom: 1px solid var(--menuHoverCoolor);
+        display: block;
+        padding-bottom: 0.2rem;
+        transform: scaleX(0);
+        transition: 0.5s;
+      } 
+      .menu {
+        margin-left: 10px;
+        font: 1.2rem "Poppins";
+        color: var(--menuColor);
+        display: inline-block;
+      }
+      .menu:hover{
+        color: var(--menuHoverCoolor);
+      }
+      .menu:hover::after{
+        transform: scaleX(1);
+      }
+      .hamburger_menu{
+        display: none; 
+        font: 1.2rem "Poppins";
+        color: var(--menuColor);
+      }
+
+      /* Responsive */
+      @media(max-width : 768px)
+      {
+        .hamburger_menu
+        {
+            display: inline-block;
+        }
+        .area_menu
+        {   
+            /* block memposisikan agar fia turun ke bawah */
+            display: block;
+            /* absolut agar dia rata */
+            position: absolute;
+            background-color: var(--menubg);
+            /* 1 rem itu = 16 px */
+            /* top right left bottom itu hanya di set up jika menggunakan position */
+            height: 100vh;   /*satuan vh buat bgnya penuh 1 layar */
+            width: 20rem;
+            right: -100%;
+            top: 100%;
+            transition: 0.5s;
+        }
+        .area_menu.open
+        {
+            right: 0;
+        }
+        /* bagian menu disini biar menu turun kebawah tanpa merubah di tampilan awal */
+        .menu
+        {
+            display: block;
+            /* bagian margin ini buat outlinenya memanjang sesuai bg */
+            margin: 1rem;   
+            
+        }
+        /* bagian ini agar outline di bagian menu padda tampilan 768 setengah dan berada di kanan */
+        .menu::after
+        {
+            transform-origin: 0;
+        
+        }
+        .menu:hover::after{
+            transform: scaleX(0.5);   
+        }
+        
+      }
+
+      
 nav ul {
   list-style-type: none;
   margin: 0;
@@ -31,10 +128,10 @@ nav ul li {
 nav ul li a {
   text-decoration: none;
   color: #333;
+  
 }
 
 .hero {
-    position: relative;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -43,6 +140,8 @@ nav ul li a {
     color: white;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.5); /* tambahkan ini untuk membuat latar belakang transparan */
+
+    
 }
 
 .hero::before {
@@ -71,6 +170,7 @@ nav ul li a {
     cursor: pointer;
     font-size: 18px;
     margin-top: 24px;
+  
 }
 
 .features {
@@ -105,53 +205,79 @@ nav ul li a {
     margin-top: 12px;
 }
 
+
     </style>
-</head>
-<body>
+  </head>
+  <body>
+    <!-- area header -->
+    <header>
+      <!-- Header logo -->
+      <section>
+        <img src="ASSETS/logo.png" alt="Logo" />
+      </section>
+      <!-- Header Menu -->
+      <nav>
 
-    
-<header>
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
-  </header>
+        <section class="area_menu">
+            <a href="" class="menu">Profil</a>
+            <a href="" class="menu">Home</a>
+            <a href="" class="menu">About Us</a>
+        </section>
 
-    <section class="hero">
-        <h1>SELAMAT DATANG DI LAMPUNG PUNYA WISATA</h1>
-        <!-- <img src="images/sigerlpg.jpeg" alt=""> -->
-        <button>Tentang Lampung</button>
-    </section>
+        <section class="area_hamburger_menu">
+            <a href="#" class="hamburger_menu">
+            <i class="fa-solid fa-bars"></i></a>
+        </section>
+      </nav>
+    </header>
 
-    <section class="features">
-        <div class="feature">
-            <h2>Lampung Tengah</h2>
-            <p> Deskripsi </p>
-            <button onclick="location.href=''">Read More</button>
-        </div>
-        <div class="feature">
-            <h2>Lampung Selatan</h2>
-            <p>Deskripsi</p>
-            <button  onclick="location.href='' ">Read More</button>
-        </div>
-        <div class="feature">
-            <h2>Lampung Barat</h2>
-            <p>Deskripsi</p>
-            <button onclick="location.href='' ">Read More</button>
-        </div>
-        <div class="feature">
-            <h2>Lampung Timur</h2>
-            <p>Deskripsi</p>
-            <button onclick="location.href='lampungtimur.html'">Read More</button>
-        </div>
-        <div class="feature">
-            <h2>Bandar Lampung</h2>
-            <p>Deskripsi</p>
-            <button onclick="location.href='clara.html'">Read More</button>
-        </div>
-    </section>
+
+
+<section class="hero">
+    <h1>SELAMAT DATANG DI LAMPUNG PUNYA WISATA</h1>
+    <!-- <img src="images/sigerlpg.jpeg" alt=""> -->
+    <button>Tentang Lampung</button>
+</section>
+
+<section class="features">
+    <div class="feature">
+        <h2>Lampung Tengah</h2>
+        <p> Deskripsi </p>
+        <button onclick="location.href=''">Read More</button>
+    </div>
+    <div class="feature">
+        <h2>Lampung Selatan</h2>
+        <p>Deskripsi</p>
+        <button  onclick="location.href='' ">Read More</button>
+    </div>
+    <div class="feature">
+        <h2>Lampung Barat</h2>
+        <p>Deskripsi</p>
+        <button onclick="location.href='' ">Read More</button>
+    </div>
+    <div class="feature">
+        <h2>Lampung Timur</h2>
+        <p>Deskripsi</p>
+        <button onclick="location.href='lampungtimur.html'">Read More</button>
+    </div>
+    <div class="feature">
+        <h2>Bandar Lampung</h2>
+        <p>Deskripsi</p>
+        <button onclick="location.href='clara.html'">Read More</button>
+    </div>
+</section>
+
+
+<!-- internal js -->
+<script>
+    // buat event pada saat "Hamburger" di klik
+    document.querySelector(".hamburger_menu").addEventListener("click",()=>{
+        // tampilkan class open
+        document.querySelector(".area_menu").classList.toggle("open");
+    });
+
+</script>
+
 </body>
 </html>
+
