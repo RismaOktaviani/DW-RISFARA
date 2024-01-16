@@ -1,283 +1,257 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <!-- cdn font awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Titan+One&display=swap");
-      
-      * {
-        margin: 0;
-        padding: 0;
-        text-decoration: none;
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Wisata Alam</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/fontAwesome.css">
+        <link rel="stylesheet" href="css/hero-slider.css">
+        <link rel="stylesheet" href="css/templatemo-main.css">
+        <link rel="stylesheet" href="css/owl-carousel.css">
+
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    </head>
 
 
-      }
-      :root {
-        --headerBgColor: rgb(128, 113, 2);
-        --textColor: grey;
-        --menuColor: white;
-        --menuHoverCoolor: yellow;
-        --menubg: var(--textColor);
-      }
-      header {
-        background-color: var(--headerBgColor);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-       
-      }
+<body>
 
-      /* CSS MENU */
-      .area_menu, .area_hamburger_menu
-      {
-        display: inline-block;
-      }
-      .menu::after{
-        content:"";
-        border-bottom: 1px solid var(--menuHoverCoolor);
-        display: block;
-        padding-bottom: 0.2rem;
-        transform: scaleX(0);
-        transition: 0.5s;
-      } 
-      .menu {
-        margin-left: 10px;
-        font: 1.2rem "Poppins";
-        color: var(--menuColor);
-        display: inline-block;
-      }
-      .menu:hover{
-        color: var(--menuHoverCoolor);
-      }
-      .menu:hover::after{
-        transform: scaleX(1);
-      }
-      .hamburger_menu{
-        display: none; 
-        font: 1.2rem "Poppins";
-        color: var(--menuColor);
-      }
+    <div class="fixed-side-navbar">
+        <ul class="nav flex-column">
+            <li class="nav-item"><a class="nav-link" href="#home"><span>home</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="#services"><span>About Lampung</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="#portfolio"><span>Wisata Lampung</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="#our-story"><span>Menara siger</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact-us"><span>Maps</span></a></li>
+        </ul>
+    </div>
 
-      /* Responsive */
-      @media(max-width : 768px)
-      {
-        .hamburger_menu
-        {
-            display: inline-block;
-        }
-        .area_menu
-        {   
-            /* block memposisikan agar fia turun ke bawah */
-            display: block;
-            /* absolut agar dia rata */
-            position: absolute;
-            background-color: var(--menubg);
-            /* 1 rem itu = 16 px */
-            /* top right left bottom itu hanya di set up jika menggunakan position */
-            height: 100vh;   /*satuan vh buat bgnya penuh 1 layar */
-            width: 20rem;
-            right: -100%;
-            top: 100%;
-            transition: 0.5s;
-        }
-        .area_menu.open
-        {
-            right: 0;
-        }
-        /* bagian menu disini biar menu turun kebawah tanpa merubah di tampilan awal */
-        .menu
-        {
-            display: block;
-            /* bagian margin ini buat outlinenya memanjang sesuai bg */
-            margin: 1rem;   
-            
-        }
-        /* bagian ini agar outline di bagian menu padda tampilan 768 setengah dan berada di kanan */
-        .menu::after
-        {
-            transform-origin: 0;
-        
-        }
-        .menu:hover::after{
-            transform: scaleX(0.5);   
-        }
-        
-      }
+    <div class="parallax-content baner-content" id="home">
+        <div class="container">
+            <div class="first-content">
+                <h1>Wisata</h1>
+                <span><em>Alam</em> Lampung</span>
+                <div class="primary-button">
+                    <a href="#services">About Lampung</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
-      
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
 
-nav ul li {
-  display: inline;
-  margin-right: 10px;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: #333;
-  
-}
-
-.hero {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.5); /* tambahkan ini untuk membuat latar belakang transparan */
+    <div class="service-content" id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="left-text">
+                        <h4>Lampung</h4>
+                        <div class="line-dec"></div>
+                        <p>Lampung adalah sebuah provinsi di bagian ujung selatan Pulau Sumatera, Indonesia. Ibu kota dan pusat pemerintahannya berada di Kota Bandar Lampung. Provvinsi ini memiliki dua kota, yaitu Bandar Lampung dan metro, serta 13 Kabupaten </p>
+                        <ul>
+                            <li>-  Memiliki luass wilayah daratan 69.21 km2</li>
+                            <li>-  Populasi penduduk 9.176.546 juta jiwa (2022) </li>
+                        
+                        </ul>
+                        <div class="primary-button">
+                            <a href="#portfolio">Wisata Lampung</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="service-item">
+                                <h4> Luas Wilayah</h4>
+                                <div class="line-dec"></div>
+                                <p> Provinsi Lampung memiliki luass wilayah daratan 35.376,50 km2 yang terbagi dalam 20 kecamatan dan 126</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="service-item">
+                                <h4>Terbentuknya provinsi lampung</h4>
+                                <div class="line-dec"></div>
+                                <p>pada tanggal 18 maret 1964 melalui peraturan pemerintah no 31964 yg kemudian menjadi UUD no 14 tahun 1964</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="service-item">
+                                <h4> Little Indonesia</h4>
+                                <div class="line-dec"></div>
+                                <p> provinsi yang berjuluk Sai Bumi Ruwai jurai ini memiliki berbagai suku dari indonesia dan jumlahnya lebih banyak dibandingan dengan penduduk aslinya</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="service-item">
+                                <h4>Populasi Penduduk Lampung</h4>
+                                <div class="line-dec"></div>
+                                <p> Populasi penduduk di lampung mencapai 9.176.546 juta jiwa (2022) yang terdiri atas 4.697.217 jiwa penduduk laki-laki dan 4.479.329 jiwa penduduk perempuan</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </div>
 
     
-}
+    <div class="parallax-content projects-content" id="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="owl-testimonials" class="owl-carousel owl-theme">
 
-.hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("images/menarassiger.jpeg");
-    background-size: cover;
-    background-position: center;
-    z-index: -1;
-}
-
-.hero h1 {
-    font-size: 48px;
-    margin-bottom: 24px;
-}
-
-.hero button {
-    background-color: white;
-    color: black;
-    padding: 12px 24px;
-    border: none;
-    cursor: pointer;
-    font-size: 18px;
-    margin-top: 24px;
-  
-}
-
-.features {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 48px 0;
-}
-
-.feature {
-    flex: 1 0 300px;
-    margin: 12px;
-    padding: 24px;
-    background-color: white;
-    color: black;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.feature h2 {
-    font-size: 24px;
-    margin-bottom: 12px;
-}
-
-.feature button {
-    background-color: #afa84c;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    margin-top: 12px;
-}
-
-
-    </style>
-  </head>
-  <body>
-    <!-- area header -->
-    <header>
-      <!-- Header logo -->
-      <section>
-        <img src="/logo.png" alt="Logo" />
-      </section>
-      <!-- Header Menu -->
-      <nav>
-
-        <section class="area_menu">
-            <a href="" class="menu">Profil</a>
-            <a href="" class="menu">Home</a>
-            <a href="" class="menu">About Us</a>
-        </section>
-
-        <section class="area_hamburger_menu">
-            <a href="#" class="hamburger_menu">
-            <i class="fa-solid fa-bars"></i></a>
-        </section>
-      </nav>
-    </header>
-
-
-
-<section class="hero">
-    <h1>SELAMAT DATANG DI LAMPUNG PUNYA WISATA</h1>
-    <!-- <img src="images/sigerlpg.jpeg" alt=""> -->
-    <button>Tentang Lampung</button>
-</section>
-
-<section class="features">
-    <div class="feature">
-        <h2> Wisata Lampung Tengah</h2>
-        <p> Silahkan Klik jika ingin melihat wisata apa saja yang ada di lampung tengah </p>
-        <button onclick="location.href=''">Read More</button>
+                        <div class="item">
+                            <div class="testimonials-item">
+                                <a href="images/lampungtengah.jpeg" data-lightbox="image-1"><img src="images/lampungtengah.jpeg" alt=""></a>
+                                <div class="text-content">
+                                    <h4>Lampung Tengah</h4>
+                                    <div class="feature">
+                                        <button href = "lampungtimur.html">Read More</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="testimonials-item">
+                                <a href="images/lampungselatan.jpeg" data-lightbox="image-1"><img src="images/lampungselatan.jpeg" alt=""></a>
+                                <div class="text-content">
+                                    <h4>Lampung Selatan</h4>
+                                    <div class="feature">
+                                        <button onclick="location.href=''">Read More</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="testimonials-item">
+                              <a href="images/lampungtimur.jpeg" data-lightbox="image-1"><img src="images/lampungtimur.jpeg" alt=""></a>
+                              <div class="text-content">
+                                  <h4>Lampung Timur</h4>
+                                  <div class="feature">
+                                      <button onclick="window.location.href='lampungtimur.html'">Read More</button>
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
+                        <div class="item">
+                            <div class="testimonials-item">
+                                <a href="images/balam.jpeg data-lightbox="image-1"><img src="images/balam.jpeg" alt=""></a>
+                                <div class="text-content">
+                                    <h4>Bandar Lampung</h4>
+                                    <div class="feature">
+                                        <button onclick="location.href=''">Read More</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="testimonials-item">
+                                <a href="images/lampungbarat.jpeg" data-lightbox="image-1"><img src="images/lampungbarat.jpeg" alt=""></a>
+                                <div class="text-content">
+                                    <h4>lampung Barat</h4>
+                                    <div class="feature">
+                                        <button onclick="location.href=''">Read More</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="feature">
-        <h2>Lampung Selatan</h2>
-        <p> Silahkan Klik jika ingin melihat wisata apa saja yang ada di lampung selatan </p>
-        <button  onclick="location.href='' ">Read More</button>
-    </div>
-    <div class="feature">
-        <h2>Lampung Barat</h2>
-        <p> Silahkan Klik jika ingin melihat wisata apa saja yang ada di lampung barat </p>
-        <button onclick="location.href='' ">Read More</button>
-    </div>
-    <div class="feature">
-        <h2>Lampung Timur</h2>
-        <p> Silahkan Klik jika ingin melihat wisata apa saja yang ada di lampung timur </p>
-        <button onclick="location.href='lampungtimur.html'">Read More</button>
-    </div>
-    <div class="feature">
-        <h2>Bandar Lampung</h2>
-        <p> Silahkan Klik jika ingin melihat wisata apa saja yang ada di bandar lampung  </p>
-        <button onclick="location.href='clara.html'">Read More</button>
-    </div>
-</section>
 
 
-<!-- internal js -->
-<script>
-    // buat event pada saat "Hamburger" di klik
-    document.querySelector(".hamburger_menu").addEventListener("click",()=>{
-        // tampilkan class open
-        document.querySelector(".area_menu").classList.toggle("open");
-    });
+    <div class="tabs-content" id="our-story">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 mx-auto">
+                    <div class="wrapper">
+                    <section id="first-tab-group" class="tabgroup">
+                      <div id="tab1">
+                        <img src="images/menarasiger.jpg" alt="">
+                        <p>Menara Siger, titik nol Sumatra, diresmikan oleh Gubernur Lampung Sjachroedin Z.P. pada 30 April 2008. Dibangun di Bukit Pelabuhan Bakauheni, menara ini menjadi simbol Lampung dan ikon pariwisata. Diresmikan dengan penekanan sirine, penglepasan merpati, dan iringan lagu Mars Lampung. Gubernur optimistis menara ini meningkatkan pendapatan daerah hingga 15% dengan asumsi 3.500 kendaraan dan 15 juta orang melintasi setiap tahun. Menara Siger, dengan ketinggian 110 meter di atas permukaan laut, menjadi land mark dan pusat informasi pariwisata. Dibangun dengan teknik ferrocement oleh arsitek asli Lampung, Anshori Djausal. Ia berpotensi mendorong investasi dan pengembangan kawasan pintu gerbang Pulau Sumatra. Menara Siger mencerminkan budaya Lampung Pepadun dengan sembilan rangkaian menara yang melambangkan sembilan bahasa di Lampung. Payung tiga warna di puncak menara melambangkan tatanan sosial. Menara Siger tidak hanya fisik, tetapi mencerminkan identitas budaya dan visi unggul Lampung. Sebagai ikon kebanggaan, menara ini menjadi pusat promosi pariwisata dan potensi ekonomi Provinsi Lampung.</p>
+                      </div>
+                    </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-</script>
+
+    <div class="parallax-content contact-content" id="contact-us">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="images/Menara-Siger.png" alt="">
+                    </div>
+                <div class="col-md-6">
+                    <div class="map">
+
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1474129.8690871715!2d104.2249420384235!3d-4.776545325238482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e3b760153ac22a7%3A0x8f3b58c75f89b09a!2sLampung!5e0!3m2!1sid!2sid!4v1705397486524!5m2!1sid!2sid" width="100%" height="390" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="primary-button">
+                        <a href="#home">Back To Top</a>
+                    </div>
+                   
+                    <p>Copyright &copy; 2023 Risfara 
+            
+            
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        function openCity(cityName) {
+            var i;
+            var x = document.getElementsByClassName("city");
+            for (i = 0; i < x.length; i++) {
+               x[i].style.display = "none";  
+            }
+            document.getElementById(cityName).style.display = "block";  
+        }
+    </script>
+
+    <script>
+        $(document).ready(function(){
+          $(".fixed-side-navbar a, .primary-button a").on('click', function(event) {
+            if (this.hash !== "") {
+              event.preventDefault();
+              var hash = this.hash;
+              $('html, body').animate({
+                scrollTop: $(hash).offset().top
+              }, 800, function(){
+                window.location.hash = hash;
+              });
+            } // End if
+          });
+        });
+    </script>
 
 </body>
 </html>
-
