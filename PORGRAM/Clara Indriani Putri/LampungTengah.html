@@ -11,7 +11,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap');
         
         :root{
-            --header_bg : #647D87;
+            --header_bg : #304d30;
             --text_color : #092635;
             --menu_color : #ffffff;
             --menu_hover_color : #fef900;
@@ -31,90 +31,15 @@
             justify-content: space-between;
             align-items: center;
             padding: 30px;
-            /* position: fixed; */
             top: 0;
             left: 0;
             right: 0;
-        }
-
-         
-
-        header > .area2
-        {
             font-family: 'poppins';
             color: white;
             text-align: center;
+            justify-content: center;
         }
 
-        .area_menu, .area_hamburger_menu{
-            display: inline-block;
-
-        }
-
-        .menu{
-            margin-left: 10px;
-            font: 1.2rem 'Poppins';
-            color: var(--menu_color);
-            display: inline-block;
-        }
-
-        .menu::after{
-            content: "";
-            border-bottom: 1px solid var(--menu_hover_color);
-            display: block;
-            padding: 0.2rem;
-            transform: scaleX(0);
-            transition: 0.5s;
-        }
-
-        .menu:hover{
-            color: var(--menu_hover_color);
-        }
-
-        .menu:hover::after{
-            transform: scaleX(1);
-        }
-        
-        .hamburger_menu{
-            display: none;
-            font: 1.2rem 'Poppins';
-            color: var(--menu_color);
-        }
-
-        /* responsive */
-        @media(max-width: 768px){
-            .hamburger_menu{
-                display: inline-block;
-            }
-
-            .area_menu{
-                display: block;
-                position: absolute;
-                background-color: var(--menu_bg);
-                width: 20rem;
-                height: 100vh;
-                right: -100%;
-                top: 100%;
-                transition: 0.5s;
-            }
-
-            .area_menu.open{
-                right: 0;
-            }
-
-            .menu{
-                display: block;
-                margin: 1rem;
-            }
-
-            .menu::after{
-                transform-origin: 0;
-            }
-
-            .menu:hover::after{
-                transform: scaleX(0.5);
-            }
-        }
 
         main {
             display: grid;
@@ -155,21 +80,18 @@
             font-size: 20px;
             font-family: 'poppins';
         }
+
+         /* responsive */
+         @media(max-width: 768px){
+            
+        }
     </style>
 </head>
 <body>
 
     <header>
-        <h1 class="area2">Selamat Datang di Wisata Alam Lampung Tengah</h1>
-    </section>
-    <!-- header menu -->
-    <nav>
-        <section class="area_menu">
-            <a href="#" class="menu">HOME</a>
-        </section>
-        <section class="area_hamburger_menu">
-            <a href="#" class="hamburger_menu"><i class="fa-solid fa-bars"></i></a>
-        </section>
+        <h1 class="header">Selamat Datang di Wisata Alam Lampung Tengah</h1>
+   
     </header>
 
     <main>
