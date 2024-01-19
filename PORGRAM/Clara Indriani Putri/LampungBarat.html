@@ -10,7 +10,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap');
         
         :root{
-            --header_bg : #647D87;
+            --header_bg : #304d30;
             --text_color : #092635;
             --menu_color : #ffffff;
             --menu_hover_color : #fef900;
@@ -78,8 +78,53 @@
             color: var(--menu_color);
         }
 
-        /* responsive */
-        @media(max-width: 768px){
+        main {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .wisata-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border: 2px solid black;
+            /* background-color: #637E76; */
+            padding: 40px ;
+            margin: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wisata-card_img 
+        {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            display: flex;
+        }
+
+        .wisata-info {
+            padding: 10px;
+            text-align: justify;
+            font: 16px;
+            font-family: 'Poppins', sans-serif;
+            color: black;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background-color: #304d30;
+            color: #fff;
+            font-size: 20px;
+            font-family: 'poppins';
+        }
+
+         /* responsive */
+         @media(max-width: 768px){
             .hamburger_menu{
                 display: inline-block;
             }
@@ -111,46 +156,13 @@
             .menu:hover::after{
                 transform: scaleX(0.5);
             }
-        }
 
-        main {
+            .main { 
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+            grid-template-columns: 1fr;
             gap: 20px;
             padding: 20px;
-        }
-
-        .wisata-card {
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border: 2px solid black;
-            background-color: #637E76;
-        }
-
-        .wisata-card_img 
-        {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-        }
-
-        .wisata-info {
-            padding: 15px;
-            text-align: justify;
-            font: 16px;
-            font-family: 'Poppins', sans-serif;
-            color: #fff;
-        }
-
-        footer {
-            text-align: center;
-            padding: 30px;
-            background-color: #647D87;
-            color: #fff;
-            font-size: 20px;
-            font-family: 'poppins';
+            }
         }
     </style>
 </head>
@@ -163,7 +175,6 @@
         <nav>
             <section class="area_menu">
                 <a href="#" class="menu">HOME</a>
-                <a href="#" class="menu">CONTACT</a>
             </section>
             <section class="area_hamburger_menu">
                 <a href="#" class="hamburger_menu"><i class="fa-solid fa-bars"></i></a>
@@ -178,7 +189,7 @@
         <img src="aset/kebun raya liwa.jpg" alt="Wisata 1" class="wisata-card_img">
     <div class="wisata-info">
             <h2>1. KEBUN RAYA LIWA</h2>
-            <p>Kebun Raya Liwa adalah wisata yang bertema alam dengan dikelilingi beragam panorama di Lampung Barat. Lahan yang sedikit tinggi membuat pengunjung merasa puas saat melihat keindahan dari atas. Disana banyak pohon yang menjulang tinggi dengan hamparan rumput terbentang luas. Bahkan di setiap sudut ada tanaman lain seperti bunga dan daun yang tumbuh subur. Kebun Raya Liwa tersedia secara gratis tetapi khusus tamu yang parkir kendaraan maka perlu membayar karcis, mulai dari Rp 5.000 untuk sepeda motor dan Rp 10.000 jenis mobil.</p>   
+            <p>Kebun Raya Liwa, Lampung Barat, menyajikan panorama alam yang indah dengan pepohonan tinggi dan rumput luas. Gratis masuk, tetapi pengunjung yang membawa kendaraan perlu membayar karcis, mulai dari Rp 5.000 untuk sepeda motor dan Rp 10.000 untuk mobil.</p>   
             <p> Kebun Raya Liwa terletak di Way Mengaku, Kabupaten Lampung Barat, Lampung.</p>
         </div>
         </div>
@@ -188,7 +199,7 @@
         <img src="aset/sungai way besai.jpg" alt="Wisata 2" class="wisata-card_img">
     <div class="wisata-info">
             <h2>2. SUNGAI WAY BESAI</h2>
-            <p>Sungai Way Besai di Lampung Barat memiliki daya pikat untuk mendatangkan wisatawan. Terutama bagi yang memiliki hobi wisata ekstrem, wajib singgah ke sini. Tempat ini, tak hanya menyediakan wisata air arung jeram saja, tapi juga panorama alam hutan lindung yang begitu asri. Para wisatawan bisa menikmati arung jeram sambil menikmati pemandangan sekitar. Tiket arung jeram di Sungai Way Besai dikenakan untuk rafting di Sungai Way Besai cukup murah, yakni berkisar Rp150.000 untuk enam orang dalam satu perahu. Harga tersebut sudah termasuk fasilitas atau perlengkapan lengkap untuk rafting seperti helm dan pelampung.</p>
+            <p>Sungai Way Besai di Lampung Barat menawarkan pengalaman arung jeram dan keindahan hutan lindung. Tiket arung jeram cukup terjangkau, sekitar Rp150.000 untuk enam orang per perahu, termasuk perlengkapan seperti helm dan pelampung.</p>
             <p>Tempat ini berlokasi di Desa Suka Jaya, Kecamatan Sumberjaya, Kabupaten Lampung Barat.</p>            
         </div>
         </div>
@@ -197,7 +208,7 @@
         <img src="aset/sumber iar panas gemburak.webp" alt="Wisata 3" class="wisata-card_img"> 
         <div class="wisata-info">
             <h2>3. SUMBER AIR PANAS GEMBURAK</h2>
-            <p>Gemburak merupakan salah satu wisata Sumber Air Panas yang terkenal di Lampung Barat. Salah satu bukti kebesaran Tuhan ini, letaknya tersembunyi di Kecamatan Suoh, Lampung Barat, Provinsi Lampung, 250 kilometer dari Bandar Lampung. Hamparan luas dan pesona alam panas bumi dari Gemburak ini pastinya memanjakan mata para traveler. Apalagi, Pemandian air panas belerang bakal membuat badan bugar setelah melakukan perjalanan.</p> 
+            <p>Gemburak adalah Sumber Air Panas terkenal di Lampung Barat, menyuguhkan pesona alam panas bumi yang memukau di Kecamatan Suoh, sekitar 250 kilometer dari Bandar Lampung. Pemandian air panas belerang di sana menjadi pilihan sempurna untuk menyegarkan badan setelah perjalanan.</p> 
             <p>Lokasi Sumber Air Panas Gemburak terletak di Kecamatan Suoh, Lampung Barat, Provinsi Lampung</p>            
         </div>
     </div>
@@ -207,7 +218,7 @@
         <img src="aset/situs batu brak.JPG" alt="Wisata 4" class="wisata-card_img">
         <div class="wisata-info">
             <h2>4. SITUS BATU BRAK</h2>
-            <p>Situs Megalitik Batu Berak adalah jejak budaya, pengetahuan peradaban masyarakat lokal pada masanya. Susunan bebatuan di situs ini memberikan gambaran bahwa pada masa itu sudah mengenal pengetahuan walau masih sederhana. Masuk ke area situs, pengunjung tidak perlu membayar banyak pengeluaran. Bayar biaya parkir sudah termasuk tiket masuk, Motor: Rp.5.000 dan Mobil: Rp.10.000</p>         
+            <p>Situs Megalitik Batu Berak adalah jejak budaya masyarakat lokal pada masa lampau. Pengunjung dapat menikmati situs ini dengan membayar biaya parkir, Rp.5.000 untuk sepeda motor dan Rp.10.000 untuk mobil, tanpa biaya masuk tambahan.</p>         
             <p>Situs ini terletak di Pekon (Desa), Kecamatan Kebon Tebu, Kabupaten Lampung Barat.</p>    
         </div>
     </div>
@@ -217,7 +228,7 @@
         <img src="aset/pinusan.jpg" alt="Wisata 5" class="wisata-card_img">
         <div class="wisata-info">
             <h2>5. PINUSAN</h2>
-            <p>Wisata pinusan di Lampung Barat adalah sebuah keajaiban alam yang tak terlupakan. Dengan keindahan alamnya yang menakjubkan, wisata pinusan menjadi daya tarik utama bagi wisatawan yang ingin mengeksplorasi keindahan Lampung Barat. Dan untuk harga tiket masuk wisata Pinus sangat murah yaitu hanya di bandrol dengan Rp10.000 rupiah saja per orang dan untuk parkir dibandrol Rp 5.000/kendaraan.</p>       
+            <p>Wisata Pinusan di Lampung Barat adalah keajaiban alam yang memukau dan menjadi daya tarik utama bagi para wisatawan. Harga tiket masuk sangat terjangkau, hanya Rp10.000 per orang, dan biaya parkir Rp5.000 per kendaraan.</p>       
             <p>Wisata pinusan terletak di desa Sukapura kecamatan sumber jaya kabupaten Lampung Barat</p>      
         </div>
     </div>
@@ -227,17 +238,17 @@
         <img src="aset/kubu perahu.jpg" alt="Wisata 6" class="wisata-card_img">
         <div class="wisata-info">
             <h2>6. WISATA ALAM KUBU PERAHU</h2>
-            <p>Wisata Kubu Perahu merupakan perbukitan yang dikelilingi sungai dan hutan dengan pohon-pohon besar  berusia ratusan tahun. Adapun pohon-pohon ini merupakan jenis pohon yang dilindungi pemerintah. Kubu Perahu juga menawarkan wisata junggle tracking. Anda tahu jungle tracking? Jungle tracking adalah salah satu kegiatan di alam bebas yang berkaitan erat dengan ekowisata dan kental dengan unsur petualangan. Sementara itu untuk tarif masuk atau tiket masuk, bagi wisatawan lokal cukup terjangkau karena harga tiket masuknya hanya Rp1.500 saja. Namun untuk turis asing alias bule terkana tarif sebesar Rp15.000. </p> 
+            <p>Wisata Kubu Perahu, perbukitan yang dikelilingi sungai dan hutan dengan pohon-pohon besar berusia ratusan tahun, menawarkan pengalaman jungle tracking di alam bebas. Pohon-pohon di sana dilindungi oleh pemerintah. Tarif masuk terjangkau, hanya Rp1.500 untuk wisatawan lokal dan Rp15.000 untuk turis asing. </p> 
             <p>Lokasi wisata ini berada di antara Kota Liwa dan Taman Nasional Bukit Barisan Selatan, tepatnya di Desa Kubu Perahu, Kecamatan Balik Bukit. </p>            
         </div>
     </div>
     
 
     <div class="wisata-card">
-        <img src="aset/danau suoh.jpg" alt="Wisata 7" class="wisata-card_img">
+        <img src="aset/danausuoh.png" alt="Wisata 7" class="wisata-card_img">
         <div class="wisata-info">
             <h2>7. DANAU SUOH</h2>
-            <p>Danau Suoh terletak di kaki Gunung Pesagi, danau ini mempesona dengan pemandangan alam yang indah dan udara yang segar. Suoh Lake juga memiliki keunikan tersendiri, yakni airnya yang berwarna hijau kebiruan dan jernih. Di sekitar danau, terdapat hutan yang rimbun dan beragam flora dan fauna yang hidup di dalamnya. Pengunjung dapat menikmati keindahan danau sambil berjalan-jalan di sepanjang tepi danau atau melakukan aktivitas seperti memancing. Untuk Tiket Masuknya yaitu Gratis, tidak di pungut biaya sama sekali.</p> 
+            <p>Danau Suoh, di kaki Gunung Pesagi, menawarkan pemandangan alam indah dan udara segar. Keunikan danau ini terletak pada airnya yang berwarna hijau kebiruan dan jernih. Di sekitarnya, hutan rimbun dan flora-fauna menambah pesona. Pengunjung dapat menikmati keindahan danau tanpa biaya masuk.</p> 
             <p> Untuk Lokasinya yaitu berada di  Dusun Kalibata, desa Sukamarga, Kecamatan suoh, Kabupaten Lampung Barat, Lampung.</p>            
         </div>
     </div>
@@ -246,7 +257,7 @@
         <img src="aset/air terjun mbah gimo.jpg" alt="Wisata 8" class="wisata-card_img">
         <div class="wisata-info">
             <h2>8. AIR TERJUN MBAH GIMO</h2>
-            <p>Air Terjun Mbah Gimo merupakan salah satu diantara banyaknya air terjun yang ada di Lampung Barat. Keindahan air terjun ini juga tak kalah dengan salah satu air terjun indah lainnya di Lampung Barat yakni Air Terjun Sepapah Kiri dan Sepapah Kanan. Berada diantara perbukitan dan perkebunan kopi, Air Terjun yang berlokasi di Air Hitam Lampung Barat patut anda jadikan sebagai daftar kunjungan. Keindahan air terjun yang nampak seperti tirai dengan debit air yang besar berpadu dengan panorama alam disekitarnya akan membius mata. Untuk harga tiket masuknya yaitu gratis alias tidak tipungut biaya sama sekali.</p>
+            <p>Air Terjun Mbah Gimo di Lampung Barat, bersama dengan Sepapah Kiri dan Sepapah Kanan, menawarkan keindahan alam yang memukau. Terletak di antara perbukitan dan kebun kopi, air terjun ini di Air Hitam Lampung Barat adalah destinasi yang patut dikunjungi. Keindahan air terjun seperti tirai dan pemandangan alam sekitarnya yang menakjubkan bisa dinikmati tanpa biaya masuk.</p>
             <p> Air terjun ini beralamat di Talang Mbah Gimo, Kecamatan Air Hitam, Kabupaten Lampung Barat.</p>             
         </div>
     </div>
