@@ -114,9 +114,8 @@
             margin-bottom: 20px;
         }
 
-         /* responsive */
-         @media(max-width: 768px){
-           
+          /* responsive */
+          @media(max-width: 768px){
             .main { 
             display: grid;
             grid-template-columns: 1fr;
@@ -124,6 +123,76 @@
             padding: 20px;
             }
         }
+            @media(max-width: 420px){
+            .main { 
+            display: grid;
+            grid-template-columns: 1fr;
+            width: 20rem;
+            gap: 20px;
+            padding: 20px;
+            }
+
+            header{
+            background-color: var(--header_bg);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px;
+            top: 0;
+            left: 0;
+            right: 0;
+            font-family: 'poppins';
+            color: white;
+            text-align: center;
+            justify-content: center;
+            width: 23rem;
+        } 
+    
+            footer {
+            text-align: center;
+            padding: 30px;
+            background-color: #304d30;
+            color: #fff;
+            font-size: 20px;
+            font-family: 'poppins';
+            width: 23rem;
+        }
+     }
+
+     @media(max-width: 320px){
+            .main { 
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            padding: 20px;
+            }
+
+            header{
+            background-color: var(--header_bg);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px;
+            top: 0;
+            left: 0;
+            right: 0;
+            font-family: 'poppins';
+            color: white;
+            text-align: center;
+            justify-content: center;
+            width: 23rem;
+        } 
+    
+            footer {
+            text-align: center;
+            padding: 30px;
+            background-color: #304d30;
+            color: #fff;
+            font-size: 20px;
+            font-family: 'poppins';
+            width: 23rem;
+        }
+     }
     </style>
 </head>
 <body>
