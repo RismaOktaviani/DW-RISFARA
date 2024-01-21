@@ -36,20 +36,6 @@
   float: left;
 }
 
-.owl-controls {
-  @media (max-width: @screen-sm-max) {
-    top: -120px;
-  }
-  top: -200px;
-  width: 100%;
-  text-align: center;
-  display: inline-block;
-}
-
-.owl-controls a {
-  color: #336699;
-}
-
 .owl-controls a:hover {
   color: #336699;
 }
@@ -161,7 +147,6 @@
   cursor: pointer;
   display: inline-block;
   zoom: 1;
-  *display: inline;/*IE7 life-saver */
 }
 .owl-theme .owl-controls .owl-page a{
   display: block;
