@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WISATA LAMPUNG BARAT</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap');
+        
+        :root{
+            --header_bg : #304d30;
+        }
+
+        *{
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+
+        }
+
+        header{
+            background-color: var(--header_bg);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px;
+            top: 0;
+            left: 0;
+            right: 0;
+            font-family: 'poppins';
+            color: white;
+            text-align: center;
+            justify-content: center;
+        }
+
+        
+        main {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+            gap: 20px;
+            padding: 30px;
+        }
+
+        .wisata-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 40px ;
+            margin: 20px;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 10px 20px rgba(0, 0, 0.533);
+            transition-duration:  0.3s;
+        }
+
+        .wisata-card:hover{
+            transform: scale(1.1);
+        }
+
+        .wisata-card a {
+            background-color: #304d30;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+            transition-duration:  0.3s;
+        }
+
+        .wisata-card a:hover{
+            transform: scale(1.1);
+        }
+
+        .wisata-card_img 
+        {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            display: flex;
+            border-radius: 8px;
+        }
+
+        .wisata-info {
+            padding: 10px;
+            text-align: justify;
+            font: 16px;
+            font-family: 'Poppins', sans-serif;
+            color: black;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background-color: #304d30;
+            color: #fff;
+            font-size: 20px;
+            font-family: 'poppins';
+        }
+
+        .back-btn{
+            display: inline-block;
+            background-color: white;
+            padding: 15px 24px;
+            border-radius: 3px;
+            text-transform: uppercase;
+            font-size: 11px;
+            color: #304d30;
+            font-weight: 700;
+            text-decoration: none;
+            letter-spacing: 0.5px;
+            margin-bottom: 20px;
+        }
+
+          /* responsive */
+          @media(max-width: 768px){
+            .main { 
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            padding: 20px;
+            }
+        }
+            @media(max-width: 420px){
+            .main { 
+            display: grid;
+            grid-template-columns: 1fr;
+            width: 20rem;
+            gap: 20px;
+            padding: 20px;
+            }
+
+            header{
+            background-color: var(--header_bg);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px;
+            top: 0;
+            left: 0;
+            right: 0;
+            font-family: 'poppins';
+            color: white;
+            text-align: center;
+            justify-content: center;
+            width: 36rem;
+        } 
+    
+            footer {
+            text-align: center;
+            padding: 30px;
+            background-color: #304d30;
+            color: #fff;
+            font-size: 20px;
+            font-family: 'poppins';
+            width: 36rem;
+        }
+     }
+
+     @media(max-width: 320px){
+            .main { 
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            padding: 20px;
+            }
+
+            header{
+            background-color: var(--header_bg);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px;
+            top: 0;
+            left: 0;
+            right: 0;
+            font-family: 'poppins';
+            color: white;
+            text-align: center;
+            justify-content: center;
+            width: 36rem;
+        } 
+    
+            footer {
+            text-align: center;
+            padding: 30px;
+            background-color: #304d30;
+            color: #fff;
+            font-size: 20px;
+            font-family: 'poppins';
+            width: 36rem;
+        }
+     }
+    </style>
+</head>
+<body>
+   
+    <header>
+            <h1 class="header"> Selamat Datang di Wisata Alam Lampung Barat</h1>
+        
+    </header>
+    
+
+<main>
+    <div class="wisata-card"> 
+        <img src="aset/kebun raya liwa.jpg" alt="Wisata 1" class="wisata-card_img">
+    <div class="wisata-info">
+            <h2>1. KEBUN RAYA LIWA</h2>
+            <p>Kebun Raya Liwa, Lampung Barat, menyajikan panorama alam yang indah dengan pepohonan tinggi dan rumput luas. Gratis masuk, tetapi pengunjung yang membawa kendaraan perlu membayar karcis, mulai dari Rp 5.000 untuk sepeda motor dan Rp 10.000 untuk mobil.</p>   
+            <p> Kebun Raya Liwa terletak di Way Mengaku, Kabupaten Lampung Barat, Lampung.</p>
+            <a href="https://maps.app.goo.gl/t2xFdjUyFtaijAjg9" target="_blank"> Lihat Lokasi</a>
+        </div>
+        </div>
+        
+
+        <div class="wisata-card">
+        <img src="aset/sungai way besai.jpg" alt="Wisata 2" class="wisata-card_img">
+    <div class="wisata-info">
+            <h2>2. SUNGAI WAY BESAI</h2>
+            <p>Sungai Way Besai di Lampung Barat menawarkan pengalaman arung jeram dan keindahan hutan lindung. Tiket arung jeram cukup terjangkau, sekitar Rp150.000 untuk enam orang per perahu, termasuk perlengkapan seperti helm dan pelampung.</p>
+            <p>Tempat ini berlokasi di Desa Suka Jaya, Kecamatan Sumberjaya, Kabupaten Lampung Barat.</p>
+            <a href="https://maps.app.goo.gl/3AxCegvcXqf4wHx19"target="_blank">Lihat Lokasi</a>            
+        </div>
+        </div>
+
+    <div class="wisata-card">
+        <img src="aset/sumber iar panas gemburak.webp" alt="Wisata 3" class="wisata-card_img"> 
+        <div class="wisata-info">
+            <h2>3. SUMBER AIR PANAS GEMBURAK</h2>
+            <p>Gemburak adalah Sumber Air Panas terkenal di Lampung Barat, menyuguhkan pesona alam panas bumi yang memukau di Kecamatan Suoh, sekitar 250 kilometer dari Bandar Lampung. Pemandian air panas belerang di sana menjadi pilihan sempurna untuk menyegarkan badan setelah perjalanan.</p> 
+            <p>Lokasi Sumber Air Panas Gemburak terletak di Kecamatan Suoh, Lampung Barat, Provinsi Lampung</p>
+            <a href="https://maps.app.goo.gl/QxqpPYvLSKDVUTxH7"target="_blank">Lihat Lokasi</a>              
+        </div>
+    </div>
+
+
+    <div class="wisata-card">
+        <img src="aset/situs batu brak.JPG" alt="Wisata 4" class="wisata-card_img">
+        <div class="wisata-info">
+            <h2>4. SITUS BATU BRAK</h2>
+            <p>Situs Megalitik Batu Berak adalah jejak budaya masyarakat lokal pada masa lampau. Pengunjung dapat menikmati situs ini dengan membayar biaya parkir, Rp.5.000 untuk sepeda motor dan Rp.10.000 untuk mobil, tanpa biaya masuk tambahan.</p>         
+            <p>Situs ini terletak di Pekon (Desa), Kecamatan Kebon Tebu, Kabupaten Lampung Barat.</p>   
+            <a href="https://maps.app.goo.gl/ggNcvU8g5zzDeLqYA"target="_blank">Lihat Lokasi</a>  
+        </div>
+    </div>
+   
+
+    <div class="wisata-card">
+        <img src="aset/pinusan.jpg" alt="Wisata 5" class="wisata-card_img">
+        <div class="wisata-info">
+            <h2>5. PINUSAN</h2>
+            <p>Wisata Pinusan di Lampung Barat adalah keajaiban alam yang memukau dan menjadi daya tarik utama bagi para wisatawan. Harga tiket masuk sangat terjangkau, hanya Rp10.000 per orang, dan biaya parkir Rp5.000 per kendaraan.</p>       
+            <p>Wisata pinusan terletak di desa Sukapura kecamatan sumber jaya kabupaten Lampung Barat</p>
+            <a href="https://maps.app.goo.gl/Uj2QFMgnSuEVha5P9"target="_blank">Lihat Lokasi</a>      
+        </div>
+    </div>
+    
+
+    <div class="wisata-card">
+        <img src="aset/kubu perahu.jpg" alt="Wisata 6" class="wisata-card_img">
+        <div class="wisata-info">
+            <h2>6. WISATA ALAM KUBU PERAHU</h2>
+            <p>Wisata Kubu Perahu, perbukitan yang dikelilingi sungai dan hutan dengan pohon-pohon besar berusia ratusan tahun, menawarkan pengalaman jungle tracking di alam bebas. Pohon-pohon di sana dilindungi oleh pemerintah. Tarif masuk terjangkau, hanya Rp1.500 untuk wisatawan lokal dan Rp15.000 untuk turis asing. </p> 
+            <p>Lokasi wisata ini berada di antara Kota Liwa dan Taman Nasional Bukit Barisan Selatan, tepatnya di Desa Kubu Perahu, Kecamatan Balik Bukit. </p>    
+            <a href="https://maps.app.goo.gl/528urUf1br56XK9y5"target="_blank">Lihat Lokasi</a>        
+        </div>
+    </div>
+    
+
+    <div class="wisata-card">
+        <img src="aset/danausuoh.png" alt="Wisata 7" class="wisata-card_img">
+        <div class="wisata-info">
+            <h2>7. DANAU SUOH</h2>
+            <p>Danau Suoh, di kaki Gunung Pesagi, menawarkan pemandangan alam indah dan udara segar. Keunikan danau ini terletak pada airnya yang berwarna hijau kebiruan dan jernih. Di sekitarnya, hutan rimbun dan flora-fauna menambah pesona. Pengunjung dapat menikmati keindahan danau tanpa biaya masuk.</p> 
+            <p> Untuk Lokasinya yaitu berada di  Dusun Kalibata, desa Sukamarga, Kecamatan suoh, Kabupaten Lampung Barat, Lampung.</p>   
+            <a href="https://maps.app.goo.gl/2suhUhxGUGPoo8Cx9"target="_blank">Lihat Lokasi</a>         
+        </div>
+    </div>
+
+    <div class="wisata-card">
+        <img src="aset/air terjun mbah gimo.jpg" alt="Wisata 8" class="wisata-card_img">
+        <div class="wisata-info">
+            <h2>8. AIR TERJUN MBAH GIMO</h2>
+            <p>Air Terjun Mbah Gimo di Lampung Barat, bersama dengan Sepapah Kiri dan Sepapah Kanan, menawarkan keindahan alam yang memukau. Terletak di antara perbukitan dan kebun kopi, air terjun ini di Air Hitam Lampung Barat adalah destinasi yang patut dikunjungi. Keindahan air terjun seperti tirai dan pemandangan alam sekitarnya yang menakjubkan bisa dinikmati tanpa biaya masuk.</p>
+            <p> Air terjun ini beralamat di Talang Mbah Gimo, Kecamatan Air Hitam, Kabupaten Lampung Barat.</p>     
+            <a href="https://maps.app.goo.gl/LrRknFJFHGn3NRoLA"target="_blank">Lihat Lokasi</a>         
+        </div>
+    </div>
+
+</main>
+
+<footer>
+    <div class="back-btn"><a href="risma.html">Bac To Home</a></div>
+    <p>&copy; 2023 Wisata Lampung</p>
+</footer>
+
+</body>
+</html>
